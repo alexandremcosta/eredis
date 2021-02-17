@@ -15,6 +15,7 @@ defmodule Eredis.Mixfile do
       start_permanent: Mix.env() == :prod,
       version: @version,
       docs: [
+        main: "readme",
         extras: ["README.md", "CHANGELOG.md", "doc/eredis.md", "doc/eredis_sub.md"]
       ]
     ]
