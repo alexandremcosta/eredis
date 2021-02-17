@@ -15,9 +15,11 @@
 ### <a name="type-channel">channel()</a> ###
 
 
-<pre><code>
+<pre>
+<code>
 channel() = binary()
-</code></pre>
+</code>
+</pre>
 
 
 
@@ -25,9 +27,11 @@ channel() = binary()
 ### <a name="type-option">option()</a> ###
 
 
-<pre><code>
+<pre>
+<code>
 option() = {host, string() | {local, string()}} | {port, <a href="inet.md#type-port_number">inet:port_number()</a>} | {database, integer() | string()} | {password, string()} | {reconnect_sleep, <a href="#type-reconnect_sleep">reconnect_sleep()</a>} | {connect_timeout, integer()} | {socket_options, list()} | {tls, [<a href="ssl.md#type-tls_client_option">ssl:tls_client_option()</a>]}
-</code></pre>
+</code>
+</pre>
 
 
 
@@ -35,9 +39,11 @@ option() = {host, string() | {local, string()}} | {port, <a href="inet.md#type-p
 ### <a name="type-options">options()</a> ###
 
 
-<pre><code>
+<pre>
+<code>
 options() = [<a href="#type-option">option()</a>]
-</code></pre>
+</code>
+</pre>
 
 
 
@@ -45,9 +51,11 @@ options() = [<a href="#type-option">option()</a>]
 ### <a name="type-reconnect_sleep">reconnect_sleep()</a> ###
 
 
-<pre><code>
+<pre>
+<code>
 reconnect_sleep() = no_reconnect | integer()
-</code></pre>
+</code>
+</pre>
 
 <a name="index"></a>
 
@@ -56,7 +64,8 @@ reconnect_sleep() = no_reconnect | integer()
 
 <table width="100%" border="1" cellspacing="0" cellpadding="2" summary="function index"><tr><td valign="top"><a href="#ack_message-1">ack_message/1</a></td><td> acknowledge the receipt of a pubsub message.</td></tr><tr><td valign="top"><a href="#channels-1">channels/1</a></td><td> Returns the channels the given client is currently
 subscribing to.</td></tr><tr><td valign="top"><a href="#controlling_process-1">controlling_process/1</a></td><td> Make the calling process the controlling process.</td></tr><tr><td valign="top"><a href="#controlling_process-2">controlling_process/2</a></td><td> Make the given process (pid) the controlling process.</td></tr><tr><td valign="top"><a href="#controlling_process-3">controlling_process/3</a></td><td> Make the given process (pid) the controlling process subscriber
-with the given Timeout.</td></tr><tr><td valign="top"><a href="#psubscribe-2">psubscribe/2</a></td><td> Pattern subscribe to the given channels.</td></tr><tr><td valign="top"><a href="#punsubscribe-2">punsubscribe/2</a></td><td></td></tr><tr><td valign="top"><a href="#start_link-0">start_link/0</a></td><td></td></tr><tr><td valign="top"><a href="#start_link-1">start_link/1</a></td><td> Callback for starting from poolboy.</td></tr><tr><td valign="top"><a href="#start_link-3">start_link/3</a></td><td></td></tr><tr><td valign="top"><a href="#start_link-6">start_link/6</a></td><td></td></tr><tr><td valign="top"><a href="#stop-1">stop/1</a></td><td></td></tr><tr><td valign="top"><a href="#subscribe-2">subscribe/2</a></td><td> Subscribe to the given channels.</td></tr><tr><td valign="top"><a href="#unsubscribe-2">unsubscribe/2</a></td><td></td></tr></table>
+with the given Timeout.</td></tr><tr><td valign="top"><a href="#psubscribe-2">psubscribe/2</a></td><td> Pattern subscribe to the given channels.</td></tr><tr><td valign="top"><a href="#punsubscribe-2">punsubscribe/2</a></td><td></td></tr><tr><td valign="top"><a href="#start_link-0">start_link/0</a></td><td></td></tr><tr><td valign="top"><a href="#start_link-1">start_link/1</a></td><td> Callback for starting from poolboy.</td></tr><tr><td valign="top"><a href="#start_link-3">start_link/3</a></td><td></td></tr><tr><td valign="top"><a href="#start_link-6">start_link/6</a></td><td></td></tr><tr><td valign="top"><a href="#stop-1">stop/1</a></td><td></td></tr><tr><td valign="top"><a href="#subscribe-2">subscribe/2</a></td><td> Subscribe to the given channels.</td></tr><tr><td valign="top"><a href="#unsubscribe-2">unsubscribe/2</a></td><td></td></tr>
+</table>
 
 
 <a name="functions"></a>
@@ -67,9 +76,11 @@ with the given Timeout.</td></tr><tr><td valign="top"><a href="#psubscribe-2">ps
 
 ### ack_message/1 ###
 
-<pre><code>
+<pre>
+<code>
 ack_message(Client::pid()) -&gt; ok
-</code></pre>
+</code>
+</pre>
 <br />
 
 acknowledge the receipt of a pubsub message. each pubsub
@@ -90,9 +101,11 @@ reflect the channels Redis thinks the client is subscribed to.
 
 ### controlling_process/1 ###
 
-<pre><code>
+<pre>
+<code>
 controlling_process(Client::pid()) -&gt; ok
-</code></pre>
+</code>
+</pre>
 <br />
 
 Make the calling process the controlling process. The
@@ -133,9 +146,11 @@ pubsub messages. See ack_message/1.
 
 ### controlling_process/2 ###
 
-<pre><code>
+<pre>
+<code>
 controlling_process(Client::pid(), Pid::pid()) -&gt; ok
-</code></pre>
+</code>
+</pre>
 <br />
 
 Make the given process (pid) the controlling process.
@@ -153,9 +168,11 @@ with the given Timeout.
 
 ### psubscribe/2 ###
 
-<pre><code>
+<pre>
+<code>
 psubscribe(Client::pid(), Channels::[<a href="#type-channel">channel()</a>]) -&gt; ok
-</code></pre>
+</code>
+</pre>
 <br />
 
 Pattern subscribe to the given channels. Returns immediately. The
@@ -166,9 +183,11 @@ message. Delivers {subscribed, Channel::binary(), pid()}
 
 ### punsubscribe/2 ###
 
-<pre><code>
+<pre>
+<code>
 punsubscribe(Client::pid(), Channels::[<a href="#type-channel">channel()</a>]) -&gt; ok
-</code></pre>
+</code>
+</pre>
 <br />
 
 <a name="start_link-0"></a>
@@ -181,9 +200,11 @@ punsubscribe(Client::pid(), Channels::[<a href="#type-channel">channel()</a>]) -
 
 ### start_link/1 ###
 
-<pre><code>
+<pre>
+<code>
 start_link(Args::<a href="#type-options">options()</a>) -&gt; {ok, Pid::pid()} | {error, Reason::term()}
-</code></pre>
+</code>
+</pre>
 <br />
 
 Callback for starting from poolboy
@@ -210,9 +231,11 @@ Callback for starting from poolboy
 
 ### subscribe/2 ###
 
-<pre><code>
+<pre>
+<code>
 subscribe(Client::pid(), Channels::[<a href="#type-channel">channel()</a>]) -&gt; ok
-</code></pre>
+</code>
+</pre>
 <br />
 
 Subscribe to the given channels. Returns immediately. The
@@ -223,8 +246,9 @@ message. Delivers {subscribed, Channel::binary(), pid()}
 
 ### unsubscribe/2 ###
 
-<pre><code>
+<pre>
+<code>
 unsubscribe(Client::pid(), Channels::[<a href="#type-channel">channel()</a>]) -&gt; ok
-</code></pre>
+</code>
+</pre>
 <br />
-

@@ -13,7 +13,10 @@ defmodule Eredis.Mixfile do
       package: package(),
       source_url: @source_url,
       start_permanent: Mix.env() == :prod,
-      version: @version
+      version: @version,
+      docs: [
+        extras: ["README.md", "CHANGELOG.md", "doc/eredis.md", "doc/eredis_sub.md"]
+      ]
     ]
   end
 
@@ -24,7 +27,9 @@ defmodule Eredis.Mixfile do
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
-    []
+    [
+      {:ex_doc, "~> 0.22", only: :dev, runtime: false}
+    ]
   end
 
   defp package() do
