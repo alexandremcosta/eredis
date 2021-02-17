@@ -3,12 +3,12 @@
 ## v1.3.1
 February 2021.
 
-* Prepare mix file for publishing in Hex
+* Mix file for publishing in Hex.pm
 * Nordix fork turns to be the official distributed version on Hex.pm
 
 ## v1.3.1-nordix
 
-February 2021 in the Nordix fork by Björn Svensson and Viktor Söderqvist.
+February 2021.
 
 * Fix build problems with Mix and other non-Rebar tools
 
